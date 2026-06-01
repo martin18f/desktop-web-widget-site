@@ -9,6 +9,8 @@ const useChips = document.querySelectorAll(".use-chip");
 const useCaseTitle = document.getElementById("useCaseTitle");
 const useCaseText = document.getElementById("useCaseText");
 const faqItems = document.querySelectorAll(".faq details");
+const stripeCheckoutButton = document.getElementById("stripeCheckoutButton");
+const stripeCheckoutStatus = document.getElementById("stripeCheckoutStatus");
 
 window.addEventListener("scroll", () => {
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -79,6 +81,86 @@ faqItems.forEach((item) => {
     });
   });
 });
+
+if (stripeCheckoutButton) {
+  const originalStripeButtonText = stripeCheckoutButton.textContent;
+
+  const setStripeCheckoutUnavailable = (message) => {
+    stripeCheckoutButton.disabled = true;
+    stripeCheckoutButton.textContent = "Stripe Checkout pending";
+
+    if (stripeCheckoutStatus) {
+      stripeCheckoutStatus.textContent = message;
+      stripeCheckoutStatus.classList.add("error");
+    }
+  };
+
+  const verifyStripeCheckout = async () => {
+    try {
+      const response = await fetch("/api/create-checkout-session", {
+        method: "GET",
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.ready) {
+        throw new Error("Stripe Checkout will be enabled after the secure checkout backend is deployed.");
+      }
+
+      stripeCheckoutButton.disabled = false;
+      stripeCheckoutButton.textContent = originalStripeButtonText;
+
+      if (stripeCheckoutStatus) {
+        stripeCheckoutStatus.textContent = "";
+        stripeCheckoutStatus.classList.remove("error");
+      }
+    } catch (error) {
+      setStripeCheckoutUnavailable(error.message || "Stripe Checkout will be enabled after deployment.");
+    }
+  };
+
+  verifyStripeCheckout();
+
+  stripeCheckoutButton.addEventListener("click", async () => {
+    stripeCheckoutButton.disabled = true;
+    stripeCheckoutButton.classList.add("loading");
+    stripeCheckoutButton.textContent = "Opening Stripe...";
+
+    if (stripeCheckoutStatus) {
+      stripeCheckoutStatus.textContent = "";
+      stripeCheckoutStatus.classList.remove("error");
+    }
+
+    try {
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.url) {
+        throw new Error(data.error || "Stripe Checkout is not available yet.");
+      }
+
+      window.location.href = data.url;
+    } catch (error) {
+      stripeCheckoutButton.disabled = false;
+      stripeCheckoutButton.classList.remove("loading");
+      stripeCheckoutButton.textContent = originalStripeButtonText;
+
+      if (stripeCheckoutStatus) {
+        stripeCheckoutStatus.textContent = error.message || "Stripe Checkout is not available yet.";
+        stripeCheckoutStatus.classList.add("error");
+      }
+    }
+  });
+}
 
 window.addEventListener("load", () => {
   document.body.classList.add("checkout-ready");

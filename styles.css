@@ -576,11 +576,36 @@ figcaption {
   opacity: .82;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: .72;
+}
+
+.button:disabled:hover {
+  transform: none;
+}
+
+.button.loading:disabled {
+  cursor: wait;
+}
+
 .unavailable-button:disabled,
 .unavailable-button:disabled:hover {
   color: rgba(6, 17, 13, 0.72);
   background: rgba(100, 255, 212, 0.7);
   transform: none;
+}
+
+.checkout-status {
+  min-height: 20px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.checkout-status.error {
+  color: #ff9fb8;
 }
 
 .faq-grid {

@@ -4,7 +4,7 @@ Standalone product website for Desktop Web Widget.
 
 ## Checkout Options
 
-The site currently uses Gumroad overlay checkout, Tatra banka QR payment, and a prepared direct card checkout option.
+The site currently uses Tatra banka QR payment, Stripe Checkout, and Gumroad overlay checkout.
 
 Gumroad product URL:
 
@@ -16,11 +16,11 @@ Prices shown on the site:
 
 ```text
 Tatra banka QR payment: €3.00
-Direct card checkout: €3.09
+Stripe Checkout: €3.09
 Gumroad checkout: €4.29
 ```
 
-Use HTTPS hosting for the live site so the Gumroad overlay and future payment gateway work reliably.
+Use HTTPS hosting for the live site so Stripe Checkout and Gumroad overlay checkout work reliably.
 
 ## Preview
 
@@ -31,8 +31,9 @@ Open `index.html` in a browser.
 1. Create a new GitHub repository for this folder.
 2. Push the files.
 3. Import the repository in Vercel.
-4. Use the default static project settings.
-5. Add your custom domain in Vercel Project Settings.
+4. Add the Stripe environment variables listed below.
+5. Use the default static project settings.
+6. Add your custom domain in Vercel Project Settings.
 
 ## Deploy To GitHub Pages
 
@@ -57,6 +58,8 @@ Value: martin18f.github.io
 
 7. Wait for DNS propagation, then enable HTTPS in GitHub Pages settings.
 
+GitHub Pages can host the static website, but it cannot run the Stripe serverless API endpoint. Use Vercel for the live Stripe Checkout version.
+
 ## Purchase Links
 
 Current Gumroad link:
@@ -65,16 +68,25 @@ Current Gumroad link:
 https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
 
-QR payment is available in the pricing section. Direct card checkout is prepared, but its button stays disabled until payment setup is complete.
+QR payment, Stripe Checkout, and Gumroad are available in the pricing section.
 
-## Direct Payment Gateway Recommendation
+## Stripe Checkout
 
-Recommended order:
+The Stripe button uses a serverless API endpoint:
 
-1. GoPay for Slovakia/Czech market and low percentage pricing.
-2. Stripe Payment Links or Stripe Checkout for the fastest international setup.
-3. Comgate as another regional alternative.
+```text
+api/create-checkout-session.js
+```
 
-The QR payment card currently shows `€3.00` and uses `assets/qrcode.jpeg`. The direct card checkout card currently shows `€3.09` as a GoPay-oriented estimate. After choosing a provider, replace the disabled direct checkout button in `index.html` with the provider checkout link or checkout script.
+Set these environment variables in Vercel:
+
+```text
+STRIPE_SECRET_KEY=sk_live_...
+SITE_URL=https://desktop-web-widget.martinsulak.dev
+ALLOWED_ORIGINS=https://desktop-web-widget.martinsulak.dev
+STRIPE_PRICE_EUR_CENTS=309
+```
+
+Never commit `STRIPE_SECRET_KEY` to the repository. The publishable key is not required for the current Stripe-hosted Checkout redirect flow.
 
 QR payments are manual. After payment, the buyer sends confirmation to the support email and receives the installer plus PDF manual after confirmation.

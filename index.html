@@ -50,6 +50,13 @@
         },
         {
           "@type": "Offer",
+          "price": "3.09",
+          "priceCurrency": "EUR",
+          "url": "https://desktop-web-widget.martinsulak.dev/#pricing",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
           "price": "4.29",
           "priceCurrency": "EUR",
           "url": "https://martinsulak.gumroad.com/l/desktop-web-widget",
@@ -90,7 +97,7 @@
           <span>One-time purchase</span>
           <span>User manual included</span>
         </div>
-        <p class="checkout-note">Choose QR payment, direct card checkout, or Gumroad depending on what works best for you.</p>
+        <p class="checkout-note">Choose QR payment, Stripe Checkout, or Gumroad depending on what works best for you.</p>
       </div>
       <div class="hero-visual reveal-item">
         <img src="assets/cover.png" alt="Desktop Web Widget product preview" />
@@ -204,7 +211,7 @@
         <div>
           <span>1</span>
           <h3>Download</h3>
-          <p>Purchase through QR payment, direct card checkout, or Gumroad and download the Windows installer and user manual.</p>
+          <p>Purchase through QR payment, Stripe Checkout, or Gumroad and download the Windows installer and user manual.</p>
         </div>
         <div>
           <span>2</span>
@@ -228,7 +235,7 @@
       <div class="pricing-copy">
         <p class="eyebrow">Pricing</p>
         <h2>One-time purchase for Windows.</h2>
-        <p>Choose the purchase method that works best for you. QR payment is the lowest-price option, direct card checkout is planned, and Gumroad is available now.</p>
+        <p>Choose the purchase method that works best for you. QR payment is the lowest-price option, Stripe Checkout is the recommended card option, and Gumroad is available as an alternative.</p>
       </div>
       <div class="price-options">
         <div class="price-card qr-card">
@@ -245,16 +252,17 @@
           <p class="price-note">After paying, send the payment confirmation to martinsulak18@gmail.com and the download files will be delivered manually.</p>
         </div>
         <div class="price-card gateway-card">
-          <span class="price-label">Recommended gateway</span>
+          <span class="price-label">Recommended card checkout</span>
           <div class="price">€3.09</div>
           <ul>
-            <li>GoPay card checkout planned</li>
+            <li>Secure Stripe Checkout</li>
             <li>Price adjusted for payment fees</li>
             <li>Windows installer included</li>
             <li>PDF user manual included</li>
           </ul>
-          <button class="button primary full unavailable-button" type="button" disabled>Card checkout coming soon</button>
-          <p class="price-note">Recommended setup: GoPay first, then Stripe only if you need a faster international setup.</p>
+          <button class="button primary full" id="stripeCheckoutButton" type="button" disabled>Buy with Stripe</button>
+          <p class="checkout-status" id="stripeCheckoutStatus" aria-live="polite"></p>
+          <p class="price-note">Secure card checkout handled by Stripe. Delivery is completed manually after payment confirmation.</p>
         </div>
         <div class="price-card">
           <span class="price-label">Available now</span>
@@ -291,7 +299,7 @@
         </details>
         <details>
           <summary>Is this a subscription?</summary>
-          <p>No. Desktop Web Widget is sold as a one-time purchase. QR payment and Gumroad are available now, and direct checkout is planned as a lower-friction option.</p>
+          <p>No. Desktop Web Widget is sold as a one-time purchase. QR payment, Stripe Checkout, and Gumroad are available as purchase options.</p>
         </details>
         <details>
           <summary>Where do I get support?</summary>
@@ -299,7 +307,7 @@
         </details>
         <details>
           <summary>Will this be on Microsoft Store?</summary>
-          <p>Microsoft Store release is planned. QR payment and Gumroad are available now, and direct checkout will be added when payment setup is ready.</p>
+          <p>Microsoft Store release is planned. QR payment, Stripe Checkout, and Gumroad are available as purchase options.</p>
         </details>
       </div>
     </section>
