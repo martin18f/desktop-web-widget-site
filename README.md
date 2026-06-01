@@ -2,23 +2,24 @@
 
 Standalone product website for Desktop Web Widget.
 
-## Checkout
+## Checkout Options
 
-The site uses Gumroad overlay checkout.
+The site currently uses Gumroad overlay checkout and prepares a lower-price direct checkout option.
 
-Product URL:
+Gumroad product URL:
 
 ```text
 https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
 
-Current price shown on the site:
+Prices shown on the site:
 
 ```text
-€4.29
+Direct checkout: €3.00
+Gumroad checkout: €4.29
 ```
 
-Use HTTPS hosting for the live site so the Gumroad overlay works reliably.
+Use HTTPS hosting for the live site so the Gumroad overlay and future payment gateway work reliably.
 
 ## Preview
 
@@ -39,10 +40,12 @@ Open `index.html` in a browser.
 3. Enable GitHub Pages from the `main` branch root.
 4. Add your custom domain in the Pages settings.
 
-## Purchase Link
+## Purchase Links
 
 Current Gumroad link:
 
 ```text
 https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
+
+Direct checkout is prepared in the pricing section, but the button stays disabled until a payment gateway is connected.
