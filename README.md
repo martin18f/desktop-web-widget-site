@@ -49,3 +49,13 @@ https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
 
 Direct checkout is prepared in the pricing section, but the button stays disabled until a payment gateway is connected.
+
+## Direct Payment Gateway Recommendation
+
+Recommended order:
+
+1. GoPay for Slovakia/Czech market and low percentage pricing.
+2. Stripe Payment Links or Stripe Checkout for the fastest international setup.
+3. Comgate as another regional alternative.
+
+The direct checkout card currently shows `€3.00`. After choosing a provider, replace the disabled direct checkout button in `index.html` with the provider checkout link or checkout script.
