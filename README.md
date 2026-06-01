@@ -36,10 +36,26 @@ Open `index.html` in a browser.
 
 ## Deploy To GitHub Pages
 
-1. Push this folder to a GitHub repository.
-2. Open repository settings.
-3. Enable GitHub Pages from the `main` branch root.
-4. Add your custom domain in the Pages settings.
+The prepared production domain is:
+
+```text
+https://desktop-web-widget.martinsulak.dev/
+```
+
+1. Create a public GitHub repository for this website.
+2. Push this folder to the repository.
+3. Open repository settings.
+4. Enable GitHub Pages from the `main` branch root.
+5. Keep the included `CNAME` file in the repository root.
+6. Add this DNS record at the domain provider:
+
+```text
+Type: CNAME
+Name: desktop-web-widget
+Value: martin18f.github.io
+```
+
+7. Wait for DNS propagation, then enable HTTPS in GitHub Pages settings.
 
 ## Purchase Links
 
