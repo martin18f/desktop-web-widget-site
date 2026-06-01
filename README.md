@@ -4,7 +4,7 @@ Standalone product website for Desktop Web Widget.
 
 ## Checkout Options
 
-The site currently uses Gumroad overlay checkout and prepares two lower-price options: Tatra banka QR payment and direct card checkout.
+The site currently uses Gumroad overlay checkout, Tatra banka QR payment, and a prepared direct card checkout option.
 
 Gumroad product URL:
 
@@ -49,7 +49,7 @@ Current Gumroad link:
 https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
 
-QR payment and direct card checkout are prepared in the pricing section, but their buttons stay disabled until payment setup is complete.
+QR payment is available in the pricing section. Direct card checkout is prepared, but its button stays disabled until payment setup is complete.
 
 ## Direct Payment Gateway Recommendation
 
@@ -59,4 +59,6 @@ Recommended order:
 2. Stripe Payment Links or Stripe Checkout for the fastest international setup.
 3. Comgate as another regional alternative.
 
-The QR payment card currently shows `€3.00`. The direct card checkout card currently shows `€3.09` as a GoPay-oriented estimate. After choosing a provider, replace the disabled direct checkout button in `index.html` with the provider checkout link or checkout script.
+The QR payment card currently shows `€3.00` and uses `assets/qrcode.jpeg`. The direct card checkout card currently shows `€3.09` as a GoPay-oriented estimate. After choosing a provider, replace the disabled direct checkout button in `index.html` with the provider checkout link or checkout script.
+
+QR payments are manual. After payment, the buyer sends confirmation to the support email and receives the installer plus PDF manual after confirmation.

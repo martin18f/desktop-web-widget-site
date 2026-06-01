@@ -541,29 +541,15 @@ figcaption {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.qr-placeholder {
-  width: min(180px, 100%);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+.qr-image {
+  display: block;
+  width: min(190px, 100%);
+  height: auto;
   margin: 0 0 20px;
+  padding: 10px;
   border: 1px solid rgba(100, 255, 212, 0.4);
   border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(100, 255, 212, 0.9) 10px, transparent 10px) 14px 14px / 34px 34px,
-    linear-gradient(rgba(100, 255, 212, 0.9) 10px, transparent 10px) 14px 14px / 34px 34px,
-    rgba(255, 255, 255, 0.06);
-}
-
-.qr-placeholder span {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 8px;
-  color: #06110d;
-  background: var(--mint);
-  font-weight: 950;
+  background: #fff;
 }
 
 .price-label {
