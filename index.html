@@ -44,7 +44,7 @@
           <span>One-time purchase</span>
           <span>User manual included</span>
         </div>
-        <p class="checkout-note">Choose Gumroad today, or use the lower direct checkout price once the payment gateway is live.</p>
+        <p class="checkout-note">Choose QR payment, direct card checkout, or Gumroad depending on what works best for you.</p>
       </div>
       <div class="hero-visual reveal-item">
         <img src="assets/cover.png" alt="Desktop Web Widget product preview" />
@@ -158,7 +158,7 @@
         <div>
           <span>1</span>
           <h3>Download</h3>
-          <p>Purchase through Gumroad or the direct checkout option and download the Windows installer and user manual.</p>
+          <p>Purchase through QR payment, direct card checkout, or Gumroad and download the Windows installer and user manual.</p>
         </div>
         <div>
           <span>2</span>
@@ -182,20 +182,35 @@
       <div class="pricing-copy">
         <p class="eyebrow">Pricing</p>
         <h2>One-time purchase for Windows.</h2>
-        <p>Choose the purchase method that works best for you. Direct checkout will be the lowest-price option because it avoids marketplace fees.</p>
+        <p>Choose the purchase method that works best for you. QR payment is the lowest-price option, direct card checkout is planned, and Gumroad is available now.</p>
       </div>
       <div class="price-options">
-        <div class="price-card direct-card">
-          <span class="price-label">Best price</span>
+        <div class="price-card qr-card">
+          <span class="price-label">Lowest price</span>
           <div class="price">€3.00</div>
+          <div class="qr-placeholder" aria-label="Tatra banka QR payment placeholder">
+            <span>QR</span>
+          </div>
           <ul>
-            <li>Direct payment gateway</li>
-            <li>Lower price without marketplace fees</li>
+            <li>Tatra banka QR payment</li>
+            <li>Lowest price without platform fees</li>
+            <li>Manual payment confirmation</li>
+            <li>Download delivery after confirmation</li>
+          </ul>
+          <button class="button primary full unavailable-button" type="button" disabled>QR payment coming soon</button>
+          <p class="price-note">This option will be enabled after the final payment QR code is added.</p>
+        </div>
+        <div class="price-card gateway-card">
+          <span class="price-label">Recommended gateway</span>
+          <div class="price">€3.09</div>
+          <ul>
+            <li>GoPay card checkout planned</li>
+            <li>Price adjusted for payment fees</li>
             <li>Windows installer included</li>
             <li>PDF user manual included</li>
           </ul>
-          <button class="button primary full direct-checkout-button" type="button" disabled>Direct checkout coming soon</button>
-          <p class="price-note">This option will be enabled after the direct payment gateway is connected.</p>
+          <button class="button primary full unavailable-button" type="button" disabled>Card checkout coming soon</button>
+          <p class="price-note">Recommended setup: GoPay first, then Stripe only if you need a faster international setup.</p>
         </div>
         <div class="price-card">
           <span class="price-label">Available now</span>
@@ -207,7 +222,7 @@
             <li>PDF user manual included</li>
           </ul>
           <a class="button secondary full checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy on Gumroad</a>
-          <p class="price-note">Gumroad includes platform fees, so this option costs more than direct checkout.</p>
+          <p class="price-note">Gumroad includes platform fees, so this option costs more than QR or direct checkout.</p>
         </div>
       </div>
     </section>
@@ -232,7 +247,7 @@
         </details>
         <details>
           <summary>Is this a subscription?</summary>
-          <p>No. Desktop Web Widget is sold as a one-time purchase. Gumroad is available now, and direct checkout is planned as the lower-price option.</p>
+          <p>No. Desktop Web Widget is sold as a one-time purchase. Gumroad is available now, and QR/direct checkout options are planned as lower-price options.</p>
         </details>
         <details>
           <summary>Where do I get support?</summary>
@@ -240,7 +255,7 @@
         </details>
         <details>
           <summary>Will this be on Microsoft Store?</summary>
-          <p>Microsoft Store release is planned. Gumroad is available now, and direct checkout will be added when the payment gateway is ready.</p>
+          <p>Microsoft Store release is planned. Gumroad is available now, and QR/direct checkout will be added when payment setup is ready.</p>
         </details>
       </div>
     </section>

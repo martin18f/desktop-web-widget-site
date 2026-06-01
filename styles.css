@@ -514,15 +514,17 @@ figcaption {
 }
 
 .pricing {
-  display: grid;
-  grid-template-columns: minmax(0, .74fr) minmax(0, 1.26fr);
-  gap: 38px;
-  align-items: center;
+  display: block;
+}
+
+.pricing-copy {
+  max-width: 760px;
+  margin-bottom: 34px;
 }
 
 .price-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -530,9 +532,38 @@ figcaption {
   padding: 26px;
 }
 
-.direct-card {
+.qr-card {
   border-color: rgba(100, 255, 212, 0.42);
   background: linear-gradient(145deg, rgba(100, 255, 212, 0.12), rgba(23, 27, 31, 0.92));
+}
+
+.gateway-card {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.qr-placeholder {
+  width: min(180px, 100%);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  margin: 0 0 20px;
+  border: 1px solid rgba(100, 255, 212, 0.4);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(100, 255, 212, 0.9) 10px, transparent 10px) 14px 14px / 34px 34px,
+    linear-gradient(rgba(100, 255, 212, 0.9) 10px, transparent 10px) 14px 14px / 34px 34px,
+    rgba(255, 255, 255, 0.06);
+}
+
+.qr-placeholder span {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+  color: #06110d;
+  background: var(--mint);
+  font-weight: 950;
 }
 
 .price-label {
@@ -554,13 +585,13 @@ figcaption {
   padding-left: 20px;
 }
 
-.direct-checkout-button {
+.unavailable-button {
   cursor: not-allowed;
   opacity: .82;
 }
 
-.direct-checkout-button:disabled,
-.direct-checkout-button:disabled:hover {
+.unavailable-button:disabled,
+.unavailable-button:disabled:hover {
   color: rgba(6, 17, 13, 0.72);
   background: rgba(100, 255, 212, 0.7);
   transform: none;
