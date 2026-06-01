@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Desktop Web Widget home">
       <img src="assets/logo.png" alt="" />
@@ -25,17 +26,17 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="header-buy" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy</a>
+    <a class="header-buy checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy €4.29</a>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
+    <section class="hero reveal">
+      <div class="hero-copy reveal-item">
         <p class="eyebrow">Windows desktop productivity app</p>
         <h1>Pin interactive web pages directly to your desktop.</h1>
         <p class="hero-text">Create clean, movable widgets from dashboards, crypto prices, notes, embeds, videos, monitoring pages, and other web content you want to keep visible.</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy on Gumroad</a>
+          <a class="button primary checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy now for €4.29</a>
           <a class="button secondary" href="#screenshots">View screenshots</a>
         </div>
         <div class="hero-meta">
@@ -43,13 +44,14 @@
           <span>One-time purchase</span>
           <span>User manual included</span>
         </div>
+        <p class="checkout-note">Secure checkout opens directly on this page through Gumroad.</p>
       </div>
-      <div class="hero-visual">
+      <div class="hero-visual reveal-item">
         <img src="assets/cover.png" alt="Desktop Web Widget product preview" />
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Product highlights">
+    <section class="trust-strip reveal" aria-label="Product highlights">
       <div>
         <strong>Live web content</strong>
         <span>Use real web pages, not static images.</span>
@@ -64,7 +66,7 @@
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section id="features" class="section reveal">
       <div class="section-head">
         <p class="eyebrow">Features</p>
         <h2>Everything needed to build a personal desktop dashboard.</h2>
@@ -97,46 +99,57 @@
       </div>
     </section>
 
-    <section class="section split">
+    <section class="section split use-case-section reveal">
       <div>
         <p class="eyebrow">Use cases</p>
         <h2>Keep useful web information where you can see it.</h2>
         <p>Desktop Web Widget works best for pages you want open all day without managing browser tabs or extra windows.</p>
       </div>
       <div class="use-list">
-        <span>Crypto prices</span>
-        <span>Market dashboards</span>
-        <span>Status pages</span>
-        <span>Monitoring tools</span>
-        <span>Documentation</span>
-        <span>Embeds and videos</span>
-        <span>Notes</span>
-        <span>Personal dashboards</span>
+        <button class="use-chip active" data-title="Crypto desktop" data-text="Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window.">Crypto prices</button>
+        <button class="use-chip" data-title="Market watch" data-text="Build a lightweight desktop board for stock pages, financial dashboards, and trading tools.">Market dashboards</button>
+        <button class="use-chip" data-title="System status" data-text="Pin uptime pages, service dashboards, deployment status, and monitoring views.">Status pages</button>
+        <button class="use-chip" data-title="Monitoring cockpit" data-text="Arrange several operational web tools with snapping, opacity, and saved presets.">Monitoring tools</button>
+        <button class="use-chip" data-title="Docs beside work" data-text="Keep docs, API references, checklists, and notes next to your main workspace.">Documentation</button>
+        <button class="use-chip" data-title="Media layer" data-text="Place embeddable videos, streams, or media pages in a clean locked layout.">Embeds and videos</button>
+        <button class="use-chip" data-title="Always-visible notes" data-text="Turn web-based notes and planning tools into desktop widgets.">Notes</button>
+        <button class="use-chip" data-title="Personal dashboard" data-text="Create a dashboard from the pages you personally check every day.">Personal dashboards</button>
+        <div class="use-preview" aria-live="polite">
+          <span>Selected setup</span>
+          <strong id="useCaseTitle">Crypto desktop</strong>
+          <p id="useCaseText">Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window.</p>
+        </div>
       </div>
     </section>
 
-    <section id="screenshots" class="section screenshots">
+    <section id="screenshots" class="section screenshots reveal">
       <div class="section-head">
         <p class="eyebrow">Screenshots</p>
         <h2>Designed for quick editing and clean locked layouts.</h2>
       </div>
-      <div class="screenshot-grid">
-        <figure>
-          <img src="assets/screenshot-edit-mode.png" alt="Edit mode with the floating panel above a widget" />
-          <figcaption>Edit mode with a floating panel</figcaption>
+      <div class="screenshot-viewer">
+        <figure class="screenshot-stage">
+          <img id="activeScreenshot" src="assets/screenshot-edit-mode.png" alt="Edit mode with the floating panel above a widget" />
+          <figcaption id="activeScreenshotCaption">Edit mode with a floating panel</figcaption>
         </figure>
-        <figure>
-          <img src="assets/screenshot-snapping.png" alt="Widget snapping with full monitor guide lines" />
-          <figcaption>Snapping and guide lines</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/screenshot-locked-mode.png" alt="Locked desktop widget layout" />
-          <figcaption>Clean locked mode</figcaption>
-        </figure>
+        <div class="screenshot-controls" aria-label="Screenshot selector">
+          <button class="screenshot-tab active" data-image="assets/screenshot-edit-mode.png" data-alt="Edit mode with the floating panel above a widget" data-caption="Edit mode with a floating panel">
+            <span>Edit mode</span>
+            <small>Floating controls above the active widget.</small>
+          </button>
+          <button class="screenshot-tab" data-image="assets/screenshot-snapping.png" data-alt="Widget snapping with full monitor guide lines" data-caption="Snapping and guide lines">
+            <span>Snapping</span>
+            <small>Full-monitor guides while arranging widgets.</small>
+          </button>
+          <button class="screenshot-tab" data-image="assets/screenshot-locked-mode.png" data-alt="Locked desktop widget layout" data-caption="Clean locked mode">
+            <span>Locked mode</span>
+            <small>Desktop content without the edit panel.</small>
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="section workflow">
+    <section class="section workflow reveal">
       <div class="section-head">
         <p class="eyebrow">Workflow</p>
         <h2>From download to desktop widget in minutes.</h2>
@@ -165,26 +178,27 @@
       </div>
     </section>
 
-    <section id="pricing" class="section pricing">
+    <section id="pricing" class="section pricing reveal">
       <div class="pricing-copy">
         <p class="eyebrow">Pricing</p>
         <h2>One-time purchase for Windows.</h2>
-        <p>Get the installer, portable build, and PDF user manual. Future Microsoft Store availability is planned.</p>
+        <p>Checkout opens directly on this page through Gumroad. Gumroad handles the secure payment form, receipt, and download delivery.</p>
       </div>
       <div class="price-card">
         <span class="price-label">Launch price</span>
-        <div class="price">€2.99</div>
+        <div class="price">€4.29</div>
         <ul>
           <li>Windows installer included</li>
           <li>Portable app included</li>
           <li>PDF user manual included</li>
           <li>One-time purchase</li>
         </ul>
-        <a class="button primary full" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy on Gumroad</a>
+        <a class="button primary full checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Open secure checkout</a>
+        <p class="price-note">You receive the download link and receipt by email after purchase.</p>
       </div>
     </section>
 
-    <section id="faq" class="section faq">
+    <section id="faq" class="section faq reveal">
       <div class="section-head">
         <p class="eyebrow">FAQ</p>
         <h2>Before you buy.</h2>
@@ -220,9 +234,15 @@
     <section class="final-cta">
       <h2>Turn your desktop into a calm, useful web dashboard.</h2>
       <p>Buy once, install on Windows, and start pinning the pages you use every day.</p>
-      <a class="button primary" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy Desktop Web Widget</a>
+      <a class="button primary checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy Desktop Web Widget</a>
     </section>
   </main>
+
+  <div class="sticky-cta" aria-label="Quick purchase bar">
+    <span>Desktop Web Widget</span>
+    <strong>€4.29</strong>
+    <a class="checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy</a>
+  </div>
 
   <footer class="site-footer">
     <div>
@@ -237,6 +257,7 @@
     </nav>
   </footer>
 
+  <script src="https://gumroad.com/js/gumroad.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

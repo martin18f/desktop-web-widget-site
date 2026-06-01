@@ -2,6 +2,24 @@
 
 Standalone product website for Desktop Web Widget.
 
+## Checkout
+
+The site uses Gumroad overlay checkout.
+
+Product URL:
+
+```text
+https://martinsulak.gumroad.com/l/desktop-web-widget
+```
+
+Current price shown on the site:
+
+```text
+€4.29
+```
+
+Use HTTPS hosting for the live site so the Gumroad overlay works reliably.
+
 ## Preview
 
 Open `index.html` in a browser.
