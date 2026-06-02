@@ -1,92 +1,42 @@
 # Desktop Web Widget Website
 
-Standalone product website for Desktop Web Widget.
+Public product website for Desktop Web Widget, a commercial Windows app for pinning interactive web pages directly to the desktop as movable, resizable widgets.
 
-## Checkout Options
-
-The site currently uses Tatra banka QR payment, Stripe Checkout, and Gumroad overlay checkout.
-
-Gumroad product URL:
-
-```text
-https://martinsulak.gumroad.com/l/desktop-web-widget
-```
-
-Prices shown on the site:
-
-```text
-Tatra banka QR payment: €3.00
-Stripe Checkout: €3.09
-Gumroad checkout: €4.29
-```
-
-Use HTTPS hosting for the live site so Stripe Checkout and Gumroad overlay checkout work reliably.
-
-## Preview
-
-Open `index.html` in a browser.
-
-## Deploy To Vercel
-
-1. Create a new GitHub repository for this folder.
-2. Push the files.
-3. Import the repository in Vercel.
-4. Add the Stripe environment variables listed below.
-5. Use the default static project settings.
-6. Add your custom domain in Vercel Project Settings.
-
-## Deploy To GitHub Pages
-
-The prepared production domain is:
+Live website:
 
 ```text
 https://desktop-web-widget.martinsulak.dev/
 ```
 
-1. Create a public GitHub repository for this website.
-2. Push this folder to the repository.
-3. Open repository settings.
-4. Enable GitHub Pages from the `main` branch root.
-5. Keep the included `CNAME` file in the repository root.
-6. Add this DNS record at the domain provider:
+## Purchase Options
 
 ```text
-Type: CNAME
-Name: desktop-web-widget
-Value: martin18f.github.io
+Tatra banka QR payment: €3.00
+Stripe Checkout: €3.30
+Gumroad checkout: €4.29
 ```
 
-7. Wait for DNS propagation, then enable HTTPS in GitHub Pages settings.
+Stripe Checkout is priced at `€3.30` so a standard European Economic Area card payment leaves approximately `€3.00` after Stripe's `1.5% + €0.25` fee.
 
-GitHub Pages can host the static website, but it cannot run the Stripe serverless API endpoint. Use Vercel for the live Stripe Checkout version.
-
-## Purchase Links
-
-Current Gumroad link:
+Gumroad product:
 
 ```text
 https://martinsulak.gumroad.com/l/desktop-web-widget
 ```
 
-QR payment, Stripe Checkout, and Gumroad are available in the pricing section.
+## Website Contents
 
-## Stripe Checkout
+- Product landing page
+- Pricing section with QR payment, Stripe Checkout, and Gumroad
+- Screenshots and product workflow
+- Privacy, terms, support, and payment success pages
+- Vercel serverless endpoint for Stripe Checkout
+- Sitemap and robots metadata
 
-The Stripe button uses a serverless API endpoint:
+## Product Delivery
 
-```text
-api/create-checkout-session.js
-```
+QR and Stripe purchases are delivered manually after payment confirmation. Gumroad handles receipt and download delivery through its own checkout flow.
 
-Set these environment variables in Vercel:
+## Repository Scope
 
-```text
-STRIPE_SECRET_KEY=sk_live_...
-SITE_URL=https://desktop-web-widget.martinsulak.dev
-ALLOWED_ORIGINS=https://desktop-web-widget.martinsulak.dev
-STRIPE_PRICE_EUR_CENTS=309
-```
-
-Never commit `STRIPE_SECRET_KEY` to the repository. The publishable key is not required for the current Stripe-hosted Checkout redirect flow.
-
-QR payments are manual. After payment, the buyer sends confirmation to the support email and receives the installer plus PDF manual after confirmation.
+This repository contains the public website and checkout integration for Desktop Web Widget. It does not contain the private application source code or installer build files.

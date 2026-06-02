@@ -1,6 +1,6 @@
 const PRODUCT_NAME = "Desktop Web Widget";
 const DEFAULT_SITE_URL = "https://desktop-web-widget.martinsulak.dev";
-const DEFAULT_PRICE_EUR_CENTS = 309;
+const STRIPE_PRICE_EUR_CENTS = 330;
 
 const sendJson = (response, statusCode, payload) => {
   response.statusCode = statusCode;
@@ -64,14 +64,12 @@ module.exports = async (request, response) => {
   }
 
   const siteUrl = getSiteUrl(request);
-  const price = Number.parseInt(process.env.STRIPE_PRICE_EUR_CENTS || String(DEFAULT_PRICE_EUR_CENTS), 10);
-  const unitAmount = Number.isFinite(price) && price > 0 ? price : DEFAULT_PRICE_EUR_CENTS;
 
   const params = new URLSearchParams();
   params.append("mode", "payment");
   params.append("payment_method_types[0]", "card");
   params.append("line_items[0][price_data][currency]", "eur");
-  params.append("line_items[0][price_data][unit_amount]", String(unitAmount));
+  params.append("line_items[0][price_data][unit_amount]", String(STRIPE_PRICE_EUR_CENTS));
   params.append("line_items[0][price_data][product_data][name]", PRODUCT_NAME);
   params.append("line_items[0][price_data][product_data][description]", "Windows desktop app for pinning interactive web pages as desktop widgets.");
   params.append("line_items[0][quantity]", "1");
