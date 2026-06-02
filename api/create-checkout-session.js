@@ -69,6 +69,7 @@ module.exports = async (request, response) => {
 
   const params = new URLSearchParams();
   params.append("mode", "payment");
+  params.append("payment_method_types[0]", "card");
   params.append("line_items[0][price_data][currency]", "eur");
   params.append("line_items[0][price_data][unit_amount]", String(unitAmount));
   params.append("line_items[0][price_data][product_data][name]", PRODUCT_NAME);
