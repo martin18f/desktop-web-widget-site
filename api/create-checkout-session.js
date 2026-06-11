@@ -20,6 +20,7 @@ const getSiteUrl = (request) => {
 };
 
 module.exports = async (request, response) => {
+  response.setHeader("Cache-Control", "no-store");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -97,7 +98,7 @@ module.exports = async (request, response) => {
     }
 
     sendJson(response, 200, { url: data.url });
-  } catch (error) {
-    sendJson(response, 500, { error: error.message || "Stripe checkout failed" });
+  } catch {
+    sendJson(response, 500, { error: "Stripe checkout failed" });
   }
 };

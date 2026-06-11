@@ -39,4 +39,4 @@ QR and Stripe purchases are delivered manually after payment confirmation. Gumro
 
 ## Repository Scope
 
-This repository contains the public website and checkout integration for Desktop Web Widget. It does not contain the private application source code or installer build files.
+The website lives in the `website/` directory of the private Desktop Web Widget monorepo. Set `website/` as the Vercel Root Directory.
