@@ -429,7 +429,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 18px;
-  align-items: stretch;
+  align-items: start;
 }
 
 figure {
@@ -442,8 +442,7 @@ figure {
 
 .screenshot-stage img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
 }
 
 figcaption {
