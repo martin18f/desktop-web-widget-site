@@ -7,14 +7,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-9J6V0BWL1W');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Desktop Web Widget is a Windows desktop app for pinning live web pages, dashboards, crypto prices, notes, embeds, and monitoring pages as interactive desktop widgets." />
-  <meta name="theme-color" content="#101215" />
-  <meta name="author" content="Martin Šulák" />
+  <meta name="theme-color" content="#070913" />
+  <meta name="author" content="Martin Sulak" />
   <meta name="robots" content="index, follow" />
   <meta name="application-name" content="Desktop Web Widget" />
   <meta property="og:title" content="Desktop Web Widget | Interactive Web Widgets For Windows" />
@@ -43,10 +42,10 @@
       "image": "https://desktop-web-widget.martinsulak.dev/assets/cover.png",
       "applicationCategory": "ProductivityApplication",
       "operatingSystem": "Windows 10, Windows 11",
-      "softwareVersion": "1.0.0",
+      "softwareVersion": "1.1.0",
       "author": {
         "@type": "Person",
-        "name": "Martin Šulák",
+        "name": "Martin Sulak",
         "url": "https://martinsulak.dev/"
       },
       "offers": [
@@ -77,278 +76,455 @@
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Desktop Web Widget home">
-      <img src="assets/logo.png" alt="" />
-      <span>Desktop Web Widget</span>
+      <span class="brand-mark"><img src="assets/logo.png" alt="" /></span>
+      <span class="brand-copy">
+        <strong>Desktop Web Widget</strong>
+        <small>Windows spatial workspace</small>
+      </span>
     </a>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
       <a href="#features">Features</a>
-      <a href="#screenshots">Screenshots</a>
+      <a href="#screenshots">Product</a>
+      <a href="#workflow">Workflow</a>
       <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
     </nav>
-    <a class="header-buy" href="#pricing">Pricing</a>
+    <div class="header-actions">
+      <span class="availability"><i></i> Available for Windows</span>
+      <a class="header-buy" href="#pricing">Get the app</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero reveal">
-      <div class="hero-copy reveal-item">
-        <p class="eyebrow">Windows desktop productivity app</p>
-        <h1>Desktop Web Widget</h1>
-        <p class="hero-text">Pin interactive web pages directly to your Windows desktop. Create clean, movable widgets from dashboards, crypto prices, notes, embeds, videos, monitoring pages, and other web content you want to keep visible.</p>
+    <section class="hero">
+      <div class="hero-ambient" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span>01</span> Your web, outside the browser</div>
+        <h1>Build a desktop that stays <em>alive.</em></h1>
+        <p class="hero-text">Pin the live pages you care about directly to Windows. Arrange dashboards, market data, notes, media, and monitoring tools into one focused spatial workspace.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#pricing">Choose purchase option</a>
-          <a class="button secondary" href="#screenshots">View screenshots</a>
+          <a class="button primary magnetic" href="#pricing">
+            <span>Choose purchase option</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg>
+          </a>
+          <a class="button secondary" href="#screenshots">
+            <span class="play-dot"><i></i></span>
+            Explore the product
+          </a>
         </div>
-        <div class="hero-meta">
-          <span>Windows 10/11</span>
-          <span>One-time purchase</span>
-          <span>User manual included</span>
-        </div>
-        <p class="checkout-note">Choose QR payment, Stripe Checkout, or Gumroad depending on what works best for you.</p>
-      </div>
-      <div class="hero-visual reveal-item">
-        <img src="assets/cover.png" alt="Desktop Web Widget product preview" />
-      </div>
-    </section>
-
-    <section class="trust-strip reveal" aria-label="Product highlights">
-      <div>
-        <strong>Live web content</strong>
-        <span>Use real web pages, not static images.</span>
-      </div>
-      <div>
-        <strong>Desktop-first workflow</strong>
-        <span>Move, resize, snap, layer, and lock widgets.</span>
-      </div>
-      <div>
-        <strong>Simple delivery</strong>
-        <span>Download the installer and start using it.</span>
-      </div>
-    </section>
-
-    <section id="features" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">Features</p>
-        <h2>Everything needed to build a personal desktop dashboard.</h2>
-      </div>
-      <div class="feature-grid">
-        <article>
-          <h3>Multiple Widgets</h3>
-          <p>Add separate widgets from different URLs and arrange them around your desktop.</p>
-        </article>
-        <article>
-          <h3>Interactive Pages</h3>
-          <p>Click and browse embedded pages in edit mode, then choose whether they stay interactive after locking.</p>
-        </article>
-        <article>
-          <h3>Snap Guides</h3>
-          <p>Align widgets to screen edges, center lines, and other widgets with full-monitor guide lines.</p>
-        </article>
-        <article>
-          <h3>Opacity And Layers</h3>
-          <p>Fine-tune transparency and layer order for each widget so your desktop stays usable.</p>
-        </article>
-        <article>
-          <h3>Layout Presets</h3>
-          <p>Save, load, import, and export layouts for different workflows or monitor setups.</p>
-        </article>
-        <article>
-          <h3>Focused Edit Mode</h3>
-          <p>Use a floating edit panel that stays outside the widget, so content remains visible while editing.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section split use-case-section reveal">
-      <div>
-        <p class="eyebrow">Use cases</p>
-        <h2>Keep useful web information where you can see it.</h2>
-        <p>Desktop Web Widget works best for pages you want open all day without managing browser tabs or extra windows.</p>
-      </div>
-      <div class="use-list">
-        <button class="use-chip active" data-title="Crypto desktop" data-text="Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window.">Crypto prices</button>
-        <button class="use-chip" data-title="Market watch" data-text="Build a lightweight desktop board for stock pages, financial dashboards, and trading tools.">Market dashboards</button>
-        <button class="use-chip" data-title="System status" data-text="Pin uptime pages, service dashboards, deployment status, and monitoring views.">Status pages</button>
-        <button class="use-chip" data-title="Monitoring cockpit" data-text="Arrange several operational web tools with snapping, opacity, and saved presets.">Monitoring tools</button>
-        <button class="use-chip" data-title="Docs beside work" data-text="Keep docs, API references, checklists, and notes next to your main workspace.">Documentation</button>
-        <button class="use-chip" data-title="Media layer" data-text="Place embeddable videos, streams, or media pages in a clean locked layout.">Embeds and videos</button>
-        <button class="use-chip" data-title="Always-visible notes" data-text="Turn web-based notes and planning tools into desktop widgets.">Notes</button>
-        <button class="use-chip" data-title="Personal dashboard" data-text="Create a dashboard from the pages you personally check every day.">Personal dashboards</button>
-        <div class="use-preview" aria-live="polite">
-          <span>Selected setup</span>
-          <strong id="useCaseTitle">Crypto desktop</strong>
-          <p id="useCaseText">Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window.</p>
+        <div class="hero-proof" aria-label="Product highlights">
+          <div><strong>Native</strong><span>Windows 10 / 11</span></div>
+          <div><strong>Live</strong><span>Interactive websites</span></div>
+          <div><strong>Once</strong><span>No subscription</span></div>
         </div>
       </div>
+
+      <div class="hero-product reveal" data-tilt>
+        <div class="product-orbit orbit-one"></div>
+        <div class="product-orbit orbit-two"></div>
+        <div class="desktop-window">
+          <div class="window-chrome">
+            <div class="window-brand">
+              <span class="mini-mark"></span>
+              <span>Desktop Web Widget</span>
+            </div>
+            <div class="window-status"><i></i> Edit mode active</div>
+            <div class="window-controls"><span></span><span></span><span></span></div>
+          </div>
+          <div class="desktop-canvas">
+            <img src="assets/screenshot-edit-mode.png" alt="Desktop Web Widget edit mode with a live widget and floating control panel" />
+            <div class="canvas-shine"></div>
+          </div>
+          <div class="window-footer">
+            <span><i class="live-dot"></i> 6 live surfaces</span>
+            <span>Ctrl + Alt + W</span>
+          </div>
+        </div>
+        <div class="floating-card float-card-one">
+          <span>Opacity</span>
+          <strong>82%</strong>
+          <div class="mini-range"><i></i></div>
+        </div>
+        <div class="floating-card float-card-two">
+          <span>Layout state</span>
+          <strong>Focus mode</strong>
+          <small>Saved just now</small>
+        </div>
+        <div class="floating-chip"><i></i> Live content</div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <i></i>
+      </div>
     </section>
 
-    <section id="screenshots" class="section screenshots reveal">
-      <div class="section-head">
-        <p class="eyebrow">Screenshots</p>
-        <h2>Designed for quick editing and clean locked layouts.</h2>
+    <section class="signal-strip reveal" aria-label="Core capabilities">
+      <div class="signal-intro">
+        <span class="signal-index">DW / 01</span>
+        <strong>One desktop.<br />Every signal.</strong>
       </div>
-      <div class="screenshot-viewer">
-        <figure class="screenshot-stage">
-          <img id="activeScreenshot" src="assets/desktop-with-widgets.png" alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" width="1919" height="1033" loading="lazy" decoding="async" />
-          <figcaption id="activeScreenshotCaption">Six live web widgets arranged across one desktop</figcaption>
-        </figure>
+      <div class="signal-item"><span>01</span><strong>Pin anything</strong><small>Real websites, not screenshots</small></div>
+      <div class="signal-item"><span>02</span><strong>Compose freely</strong><small>Move, resize, layer, snap</small></div>
+      <div class="signal-item"><span>03</span><strong>Lock the flow</strong><small>Clean when you are done</small></div>
+    </section>
+
+    <section id="features" class="section feature-section">
+      <div class="section-kicker reveal">
+        <span>02 / Capabilities</span>
+        <i></i>
+        <span>Engineered for daily focus</span>
+      </div>
+      <div class="section-head reveal">
+        <h2>Your workspace,<br /><span>composed like a canvas.</span></h2>
+        <p>Every control exists to help you build a calmer information layer around the work already on your screen.</p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="bento-card bento-large reveal">
+          <div class="card-topline"><span>Spatial arrangement</span><b>01</b></div>
+          <div class="snap-visual" aria-hidden="true">
+            <div class="snap-grid"></div>
+            <div class="snap-window window-a"><span>Markets</span></div>
+            <div class="snap-window window-b"><span>Monitor</span></div>
+            <div class="snap-guide vertical"></div>
+            <div class="snap-guide horizontal"></div>
+            <div class="snap-point"></div>
+          </div>
+          <div class="card-copy">
+            <h3>Snap into a layout that feels intentional.</h3>
+            <p>Align widgets to screen edges, center lines, and each other with monitor-wide precision guides.</p>
+          </div>
+        </article>
+
+        <article class="bento-card bento-tall reveal">
+          <div class="card-topline"><span>Live web engine</span><b>02</b></div>
+          <div class="live-stack" aria-hidden="true">
+            <div class="stack-card stack-back"><span>STATUS</span><i></i></div>
+            <div class="stack-card stack-mid"><span>NOTES</span><i></i></div>
+            <div class="stack-card stack-front">
+              <div class="stack-head"><span>MARKET / LIVE</span><i></i></div>
+              <strong>64,218</strong>
+              <small>+2.84% today</small>
+              <svg viewBox="0 0 240 84"><path d="M2 68C26 63 33 73 55 56S87 62 104 45s33-4 48-18 25 8 43-5 26-3 43-18"/></svg>
+            </div>
+          </div>
+          <div class="card-copy">
+            <h3>Not a screenshot. The real web.</h3>
+            <p>Browse, click, watch, monitor, and interact with live pages directly from your desktop.</p>
+          </div>
+        </article>
+
+        <article class="bento-card bento-medium reveal">
+          <div class="card-topline"><span>Visual control</span><b>03</b></div>
+          <div class="opacity-visual" aria-hidden="true">
+            <div class="opacity-disc"></div>
+            <div class="opacity-readout"><strong>76</strong><span>%</span></div>
+            <div class="opacity-scale"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="card-copy">
+            <h3>Control the visual weight.</h3>
+            <p>Tune opacity and layer order so widgets support your work instead of competing with it.</p>
+          </div>
+        </article>
+
+        <article class="bento-card bento-wide reveal">
+          <div class="card-topline"><span>Persistent systems</span><b>04</b></div>
+          <div class="preset-rail" aria-hidden="true">
+            <div class="preset active"><i></i><span>Focus</span><small>04 surfaces</small></div>
+            <div class="preset"><i></i><span>Markets</span><small>06 surfaces</small></div>
+            <div class="preset"><i></i><span>Studio</span><small>03 surfaces</small></div>
+            <div class="preset-add">+</div>
+          </div>
+          <div class="card-copy horizontal-copy">
+            <h3>Switch contexts without rebuilding.</h3>
+            <p>Save, load, import, and export complete layouts for different projects, moods, or monitor setups.</p>
+          </div>
+        </article>
+
+        <article class="bento-card bento-small reveal">
+          <div class="card-topline"><span>Quiet mode</span><b>05</b></div>
+          <div class="lock-visual" aria-hidden="true">
+            <div class="lock-ring"><svg viewBox="0 0 24 24"><path d="M7.5 10V7.5a4.5 4.5 0 019 0V10M6 10h12v10H6z"/></svg></div>
+            <span>Layout locked</span>
+          </div>
+          <div class="card-copy">
+            <h3>Set it. Lock it. Focus.</h3>
+            <p>Hide every control while keeping the content interactive.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section use-case-section">
+      <div class="use-case-shell reveal">
+        <div class="use-copy">
+          <div class="eyebrow"><span>03</span> Built around your attention</div>
+          <h2>One tool.<br />Many modes.</h2>
+          <p>Build the exact desktop layer your work needs today, then swap it for another in seconds.</p>
+          <div class="use-preview" aria-live="polite">
+            <span>Selected workspace</span>
+            <strong id="useCaseTitle">Crypto desktop</strong>
+            <p id="useCaseText">Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window.</p>
+          </div>
+        </div>
+        <div class="use-list">
+          <button class="use-chip active" data-index="01" data-title="Crypto desktop" data-text="Keep BTC, ETH, exchange pages, and market charts visible without opening a browser window."><span>01</span>Crypto prices<i></i></button>
+          <button class="use-chip" data-index="02" data-title="Market watch" data-text="Build a lightweight desktop board for stock pages, financial dashboards, and trading tools."><span>02</span>Market dashboards<i></i></button>
+          <button class="use-chip" data-index="03" data-title="System status" data-text="Pin uptime pages, service dashboards, deployment status, and monitoring views."><span>03</span>Status pages<i></i></button>
+          <button class="use-chip" data-index="04" data-title="Monitoring cockpit" data-text="Arrange several operational web tools with snapping, opacity, and saved presets."><span>04</span>Monitoring tools<i></i></button>
+          <button class="use-chip" data-index="05" data-title="Docs beside work" data-text="Keep docs, API references, checklists, and notes next to your main workspace."><span>05</span>Documentation<i></i></button>
+          <button class="use-chip" data-index="06" data-title="Media layer" data-text="Place embeddable videos, streams, or media pages in a clean locked layout."><span>06</span>Embeds and videos<i></i></button>
+          <button class="use-chip" data-index="07" data-title="Always-visible notes" data-text="Turn web-based notes and planning tools into desktop widgets."><span>07</span>Notes<i></i></button>
+          <button class="use-chip" data-index="08" data-title="Personal dashboard" data-text="Create a dashboard from the pages you personally check every day."><span>08</span>Personal dashboards<i></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section screenshots">
+      <div class="section-kicker reveal">
+        <span>04 / Product tour</span>
+        <i></i>
+        <span>See the system in motion</span>
+      </div>
+      <div class="section-head split-head reveal">
+        <h2>From open canvas<br /><span>to quiet workspace.</span></h2>
+        <p>The interface appears when you need control and disappears the moment your composition is ready.</p>
+      </div>
+      <div class="screenshot-viewer reveal">
+        <div class="screenshot-stage-wrap">
+          <div class="screenshot-chrome">
+            <div><i></i><span>DESKTOP / LIVE COMPOSITION</span></div>
+            <small id="activeScreenshotCounter">01 / 04</small>
+          </div>
+          <figure class="screenshot-stage">
+            <img id="activeScreenshot" src="assets/desktop-with-widgets.png" alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" width="1919" height="1033" loading="lazy" decoding="async" />
+            <figcaption id="activeScreenshotCaption">Six live web widgets arranged across one desktop</figcaption>
+          </figure>
+        </div>
         <div class="screenshot-controls" aria-label="Screenshot selector">
-          <button class="screenshot-tab active" data-image="assets/desktop-with-widgets.png" data-alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" data-caption="Six live web widgets arranged across one desktop">
-            <span>Full dashboard</span>
+          <button class="screenshot-tab active" data-index="01" data-image="assets/desktop-with-widgets.png" data-alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" data-caption="Six live web widgets arranged across one desktop">
+            <span><b>01</b> Full dashboard</span>
             <small>Six independent websites running together.</small>
+            <i></i>
           </button>
-          <button class="screenshot-tab" data-image="assets/screenshot-edit-mode.png" data-alt="Edit mode with the floating panel above a widget" data-caption="Edit mode with a floating panel">
-            <span>Edit mode</span>
-            <small>Floating controls above the active widget.</small>
+          <button class="screenshot-tab" data-index="02" data-image="assets/screenshot-edit-mode.png" data-alt="Edit mode with the floating panel above a widget" data-caption="Edit mode with a floating panel">
+            <span><b>02</b> Edit mode</span>
+            <small>Focused controls orbit the active widget.</small>
+            <i></i>
           </button>
-          <button class="screenshot-tab" data-image="assets/screenshot-snapping.png" data-alt="Widget snapping with full monitor guide lines" data-caption="Snapping and guide lines">
-            <span>Snapping</span>
-            <small>Full-monitor guides while arranging widgets.</small>
+          <button class="screenshot-tab" data-index="03" data-image="assets/screenshot-snapping.png" data-alt="Widget snapping with full monitor guide lines" data-caption="Snapping and guide lines">
+            <span><b>03</b> Snapping</span>
+            <small>Full-monitor guides align every surface.</small>
+            <i></i>
           </button>
-          <button class="screenshot-tab" data-image="assets/screenshot-locked-mode.png" data-alt="Locked desktop widget layout" data-caption="Clean locked mode">
-            <span>Locked mode</span>
-            <small>Desktop content without the edit panel.</small>
+          <button class="screenshot-tab" data-index="04" data-image="assets/screenshot-locked-mode.png" data-alt="Locked desktop widget layout" data-caption="Clean locked mode">
+            <span><b>04</b> Locked mode</span>
+            <small>All content. Zero interface noise.</small>
+            <i></i>
           </button>
         </div>
       </div>
     </section>
 
-    <section class="section workflow reveal">
-      <div class="section-head">
-        <p class="eyebrow">Workflow</p>
-        <h2>From download to desktop widget in minutes.</h2>
+    <section id="workflow" class="section workflow">
+      <div class="workflow-heading reveal">
+        <div>
+          <div class="eyebrow"><span>05</span> Zero-friction setup</div>
+          <h2>From download<br />to <em>flow state.</em></h2>
+        </div>
+        <p>No Node.js. No terminal. No configuration maze. Install it like a normal Windows app and shape your first workspace in minutes.</p>
       </div>
       <div class="steps">
-        <div>
-          <span>1</span>
+        <div class="step reveal">
+          <span class="step-number">01</span>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg></div>
           <h3>Download</h3>
-          <p>Purchase through QR payment, Stripe Checkout, or Gumroad and download the Windows installer and user manual.</p>
+          <p>Choose QR payment, Stripe, or Gumroad and receive the installer and manual.</p>
         </div>
-        <div>
-          <span>2</span>
+        <div class="step reveal">
+          <span class="step-number">02</span>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4-8-4zm0 0v10l8 4 8-4V7M12 11v10"/></svg></div>
           <h3>Install</h3>
-          <p>Run the installer. No Node.js, npm, Electron setup, or command line work is needed.</p>
+          <p>Run the standard Windows installer. The engine is ready immediately.</p>
         </div>
-        <div>
-          <span>3</span>
-          <h3>Add URL</h3>
-          <p>Open the app, enter a web address, and your first desktop widget appears.</p>
+        <div class="step reveal">
+          <span class="step-number">03</span>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1M14 10a4 4 0 00-5.66 0l-3 3A4 4 0 0011 18.66l1-1"/></svg></div>
+          <h3>Paste a URL</h3>
+          <p>Enter any supported web address and a live desktop surface appears.</p>
         </div>
-        <div>
-          <span>4</span>
-          <h3>Arrange</h3>
-          <p>Move, resize, snap, adjust opacity, set layers, save presets, and lock the layout.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section pricing reveal">
-      <div class="pricing-copy">
-        <p class="eyebrow">Pricing</p>
-        <h2>One-time purchase for Windows.</h2>
-        <p>Choose the purchase method that works best for you. QR payment is the lowest-price option, Stripe Checkout is the recommended card option, and Gumroad is available as an alternative.</p>
-      </div>
-      <div class="price-options">
-        <div class="price-card qr-card">
-          <span class="price-label">Lowest price</span>
-          <div class="price">€3.00</div>
-          <img class="qr-image" src="assets/qrcode.jpeg" alt="Tatra banka QR payment for Desktop Web Widget" />
-          <ul>
-            <li>Tatra banka QR payment</li>
-            <li>Lowest price without platform fees</li>
-            <li>Send confirmation to support email</li>
-            <li>Download delivery after confirmation</li>
-          </ul>
-          <a class="button primary full" href="assets/qrcode.jpeg" target="_blank" rel="noreferrer">Open QR code</a>
-          <p class="price-note">After paying, send the payment confirmation to martinsulak18@gmail.com and the download files will be delivered manually.</p>
-        </div>
-        <div class="price-card gateway-card">
-          <span class="price-label">Recommended card checkout</span>
-          <div class="price">€3.30</div>
-          <ul>
-            <li>Secure Stripe Checkout</li>
-            <li>Price adjusted for standard EEA card fees</li>
-            <li>Windows installer included</li>
-            <li>PDF user manual included</li>
-          </ul>
-          <button class="button primary full" id="stripeCheckoutButton" type="button" disabled>Buy with Stripe</button>
-          <p class="checkout-status" id="stripeCheckoutStatus" aria-live="polite"></p>
-          <p class="price-note">Secure card checkout handled by Stripe. The price is calculated to leave about €3.00 after Stripe's standard EEA card fee.</p>
-        </div>
-        <div class="price-card">
-          <span class="price-label">Available now</span>
-          <div class="price">€4.29</div>
-          <ul>
-            <li>Secure Gumroad checkout</li>
-            <li>Receipt and download delivery by email</li>
-            <li>Windows installer included</li>
-            <li>PDF user manual included</li>
-          </ul>
-          <a class="button secondary full checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy on Gumroad</a>
-          <p class="price-note">Gumroad includes platform fees, so this option costs more than QR or direct checkout.</p>
+        <div class="step reveal">
+          <span class="step-number">04</span>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/></svg></div>
+          <h3>Compose</h3>
+          <p>Move, resize, layer, tune, save the layout, and lock it into place.</p>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section faq reveal">
-      <div class="section-head">
-        <p class="eyebrow">FAQ</p>
-        <h2>Before you buy.</h2>
+    <section id="pricing" class="section pricing">
+      <div class="pricing-shell">
+        <div class="pricing-copy reveal">
+          <div class="eyebrow"><span>06</span> Simple ownership</div>
+          <h2>Buy it once.<br /><span>Keep your focus.</span></h2>
+          <p>No recurring bill and no account required. Pick the checkout route that fits you best.</p>
+          <div class="pricing-note">
+            <i></i>
+            <span><strong>Windows 10 / 11</strong> Installer and PDF manual included</span>
+          </div>
+        </div>
+        <div class="price-options">
+          <article class="price-card featured reveal">
+            <div class="price-card-head">
+              <span class="price-label">Direct / lowest price</span>
+              <span class="price-badge">Best value</span>
+            </div>
+            <div class="price"><small>&euro;</small>3<span>.00</span></div>
+            <p>Pay directly with your Tatra banka QR code.</p>
+            <div class="qr-wrap"><img class="qr-image" src="assets/qrcode.jpeg" alt="Tatra banka QR payment for Desktop Web Widget" /></div>
+            <ul>
+              <li><i></i> Lowest price without platform fees</li>
+              <li><i></i> Windows installer included</li>
+              <li><i></i> PDF user manual included</li>
+            </ul>
+            <a class="button primary full" href="assets/qrcode.jpeg" target="_blank" rel="noreferrer">Open QR code <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+            <p class="price-note">Send the payment confirmation to support for manual delivery.</p>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-card-head">
+              <span class="price-label">Secure card checkout</span>
+              <span class="method-mark">STRIPE</span>
+            </div>
+            <div class="price"><small>&euro;</small>3<span>.30</span></div>
+            <p>A familiar card checkout with secure payment handling.</p>
+            <div class="method-visual stripe-visual" aria-hidden="true">
+              <div class="card-chip"></div>
+              <span>•••• &nbsp; •••• &nbsp; •••• &nbsp; 2048</span>
+              <small>SECURE CHECKOUT</small>
+            </div>
+            <ul>
+              <li><i></i> Secure Stripe Checkout</li>
+              <li><i></i> Standard EEA card fee included</li>
+              <li><i></i> Complete Windows package</li>
+            </ul>
+            <button class="button secondary full" id="stripeCheckoutButton" type="button" disabled>Buy with Stripe <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></button>
+            <p class="checkout-status" id="stripeCheckoutStatus" aria-live="polite"></p>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-card-head">
+              <span class="price-label">Marketplace delivery</span>
+              <span class="method-mark">GUMROAD</span>
+            </div>
+            <div class="price"><small>&euro;</small>4<span>.29</span></div>
+            <p>Use Gumroad for receipt and automatic email delivery.</p>
+            <div class="method-visual gumroad-visual" aria-hidden="true">
+              <span>G</span>
+              <div><strong>Instant delivery</strong><small>Receipt + download by email</small></div>
+            </div>
+            <ul>
+              <li><i></i> Established marketplace checkout</li>
+              <li><i></i> Automatic download delivery</li>
+              <li><i></i> Installer and manual included</li>
+            </ul>
+            <a class="button secondary full checkout-link" href="https://martinsulak.gumroad.com/l/desktop-web-widget" target="_blank" rel="noreferrer">Buy on Gumroad <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+            <p class="price-note">Marketplace fees make this option slightly more expensive.</p>
+          </article>
+        </div>
       </div>
-      <div class="faq-grid">
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="faq-heading reveal">
+        <div>
+          <div class="eyebrow"><span>07</span> Questions, answered</div>
+          <h2>Before you<br /><span>make it yours.</span></h2>
+        </div>
+        <p>Everything important about compatibility, interaction, licensing, and support.</p>
+      </div>
+      <div class="faq-grid reveal">
         <details>
-          <summary>Does the app require Node.js or coding knowledge?</summary>
+          <summary><span>01</span>Does the app require Node.js or coding knowledge?<i></i></summary>
           <p>No. The download includes a normal Windows installer. You do not need Node.js, npm, Electron, or programming knowledge.</p>
         </details>
         <details>
-          <summary>Can every website be displayed?</summary>
-          <p>The app uses isolated browser views, so normal websites such as ChatGPT can load even when they reject iframe embedding. Some DRM services, enterprise login policies, extension-dependent pages, or sites that explicitly reject desktop app browsers may still be unavailable.</p>
+          <summary><span>02</span>Can every website be displayed?<i></i></summary>
+          <p>The app uses isolated browser views, so normal websites can load even when they reject iframe embedding. DRM services, enterprise policies, extension-dependent pages, or sites that reject desktop app browsers may still be unavailable.</p>
         </details>
         <details>
-          <summary>Can I click inside widgets?</summary>
+          <summary><span>03</span>Can I click inside widgets?<i></i></summary>
           <p>Yes. Widgets are clickable in edit mode. You can also choose whether each widget remains interactive after locking the layout.</p>
         </details>
         <details>
-          <summary>Is this a subscription?</summary>
-          <p>No. Desktop Web Widget is sold as a one-time purchase. QR payment, Stripe Checkout, and Gumroad are available as purchase options.</p>
+          <summary><span>04</span>Is this a subscription?<i></i></summary>
+          <p>No. Desktop Web Widget is a one-time purchase. QR payment, Stripe Checkout, and Gumroad are available.</p>
         </details>
         <details>
-          <summary>Where do I get support?</summary>
+          <summary><span>05</span>Where do I get support?<i></i></summary>
           <p>Email support is available through the contact address on the support page.</p>
         </details>
         <details>
-          <summary>Will this be on Microsoft Store?</summary>
-          <p>Microsoft Store release is planned. QR payment, Stripe Checkout, and Gumroad are available as purchase options.</p>
+          <summary><span>06</span>Will this be on Microsoft Store?<i></i></summary>
+          <p>A Microsoft Store release is planned. The direct purchase options are available now.</p>
         </details>
       </div>
     </section>
 
-    <section class="final-cta">
-      <h2>Turn your desktop into a calm, useful web dashboard.</h2>
-      <p>Buy once, install on Windows, and start pinning the pages you use every day.</p>
-      <a class="button primary" href="#pricing">Choose purchase option</a>
+    <section class="final-cta reveal">
+      <div class="cta-orbit" aria-hidden="true"></div>
+      <span class="cta-label">Your desktop is waiting</span>
+      <h2>Keep the web in sight.<br /><em>Keep your mind in flow.</em></h2>
+      <p>Build a living desktop workspace from the pages you already use every day.</p>
+      <a class="button primary magnetic" href="#pricing">Get Desktop Web Widget <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
     </section>
   </main>
 
   <div class="sticky-cta" aria-label="Quick purchase bar">
-    <span>Desktop Web Widget</span>
-    <strong>from €3</strong>
-    <a href="#pricing">Buy</a>
+    <div><i></i><span>Desktop Web Widget</span></div>
+    <strong>from &euro;3</strong>
+    <a href="#pricing">Get the app <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
   </div>
 
   <footer class="site-footer">
-    <div>
-      <strong>Desktop Web Widget</strong>
-      <span>Commercial Windows app by Martin Sulak</span>
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <span class="brand-mark"><img src="assets/logo.png" alt="" /></span>
+        <span class="brand-copy"><strong>Desktop Web Widget</strong><small>Made by Martin Sulak</small></span>
+      </a>
+      <p>A focused spatial layer for the live web on Windows.</p>
     </div>
-    <nav aria-label="Footer links">
+    <div class="footer-column">
+      <span>Product</span>
+      <a href="#features">Features</a>
+      <a href="#screenshots">Product tour</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <div class="footer-column">
+      <span>Company</span>
+      <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
+    </div>
+    <div class="footer-column">
+      <span>Creator</span>
       <a href="https://martinsulak.dev/" target="_blank" rel="noreferrer">Portfolio</a>
-    </nav>
+      <a href="mailto:martinsulak18@gmail.com">Email</a>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Martin Sulak</span>
+      <span>Designed for Windows 10 / 11</span>
+      <a href="#top">Back to top <span>↑</span></a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
