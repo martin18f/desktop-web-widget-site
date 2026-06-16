@@ -2,73 +2,219 @@
 <html lang="en">
 <head>
   <meta name="p:domain_verify" content="41b47b1ae2302c7e59b6b2cc1f805d79"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J6V0BWL1W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9J6V0BWL1W');
+    window.addEventListener('load', function () {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9J6V0BWL1W';
+      document.head.appendChild(script);
+    });
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Desktop Web Widget is a Windows desktop app for pinning live web pages, dashboards, crypto prices, notes, embeds, and monitoring pages as interactive desktop widgets." />
+  <meta name="description" content="Pin live websites as movable Windows desktop widgets. Build desktop dashboards for market data, monitoring, notes, videos, docs, and web apps." />
   <meta name="theme-color" content="#070913" />
   <meta name="author" content="Martin Sulak" />
-  <meta name="robots" content="index, follow" />
+  <meta name="creator" content="Martin Sulak" />
+  <meta name="publisher" content="Martin Sulak" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="application-name" content="Desktop Web Widget" />
-  <meta property="og:title" content="Desktop Web Widget | Interactive Web Widgets For Windows" />
-  <meta property="og:description" content="Pin live web pages, dashboards, crypto prices, notes, embeds, and monitoring pages directly to your Windows desktop." />
+  <meta name="msapplication-TileColor" content="#070913" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+  <meta property="og:title" content="Desktop Web Widget for Windows | Live Web Widgets" />
+  <meta property="og:description" content="Pin live websites, dashboards, market data, notes, embeds, videos, and monitoring pages directly to your Windows desktop." />
   <meta property="og:image" content="https://desktop-web-widget.martinsulak.dev/assets/cover.png" />
+  <meta property="og:image:secure_url" content="https://desktop-web-widget.martinsulak.dev/assets/cover.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
   <meta property="og:image:alt" content="Desktop Web Widget product preview on a Windows desktop" />
   <meta property="og:url" content="https://desktop-web-widget.martinsulak.dev/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Desktop Web Widget" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Desktop Web Widget | Interactive Web Widgets For Windows" />
-  <meta name="twitter:description" content="Pin live web pages, dashboards, crypto prices, notes, embeds, and monitoring pages directly to your Windows desktop." />
+  <meta name="twitter:title" content="Desktop Web Widget for Windows | Live Web Widgets" />
+  <meta name="twitter:description" content="Pin live websites, dashboards, market data, notes, embeds, videos, and monitoring pages directly to your Windows desktop." />
   <meta name="twitter:image" content="https://desktop-web-widget.martinsulak.dev/assets/cover.png" />
   <meta name="twitter:image:alt" content="Desktop Web Widget product preview on a Windows desktop" />
-  <title>Desktop Web Widget | Windows Desktop Web Widgets</title>
+  <meta name="twitter:url" content="https://desktop-web-widget.martinsulak.dev/" />
+  <title>Desktop Web Widget for Windows | Live Web Widget App</title>
   <link rel="canonical" href="https://desktop-web-widget.martinsulak.dev/" />
+  <link rel="alternate" hreflang="en" href="https://desktop-web-widget.martinsulak.dev/" />
+  <link rel="alternate" hreflang="x-default" href="https://desktop-web-widget.martinsulak.dev/" />
   <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLMs.txt" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preload" as="image" href="assets/ambient-orbit.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Desktop Web Widget",
-      "description": "Desktop Web Widget is a Windows desktop app for pinning live web pages, dashboards, crypto prices, notes, embeds, and monitoring pages as interactive desktop widgets.",
-      "url": "https://desktop-web-widget.martinsulak.dev/",
-      "image": "https://desktop-web-widget.martinsulak.dev/assets/cover.png",
-      "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "Windows 10, Windows 11",
-      "softwareVersion": "1.1.0",
-      "author": {
-        "@type": "Person",
-        "name": "Martin Sulak",
-        "url": "https://martinsulak.dev/"
-      },
-      "offers": [
+      "@graph": [
         {
-          "@type": "Offer",
-          "price": "3.00",
-          "priceCurrency": "EUR",
-          "url": "https://desktop-web-widget.martinsulak.dev/#pricing",
-          "availability": "https://schema.org/InStock"
+          "@type": "Person",
+          "@id": "https://martinsulak.dev/#person",
+          "name": "Martin Sulak",
+          "url": "https://martinsulak.dev/",
+          "email": "mailto:martinsulak18@gmail.com"
         },
         {
-          "@type": "Offer",
-          "price": "3.30",
-          "priceCurrency": "EUR",
-          "url": "https://desktop-web-widget.martinsulak.dev/#pricing",
-          "availability": "https://schema.org/InStock"
+          "@type": "WebSite",
+          "@id": "https://desktop-web-widget.martinsulak.dev/#website",
+          "url": "https://desktop-web-widget.martinsulak.dev/",
+          "name": "Desktop Web Widget",
+          "description": "Windows desktop app for pinning live web pages as interactive desktop widgets.",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://martinsulak.dev/#person"
+          }
         },
         {
-          "@type": "Offer",
-          "price": "4.29",
-          "priceCurrency": "EUR",
-          "url": "https://martinsulak.gumroad.com/l/desktop-web-widget",
-          "availability": "https://schema.org/InStock"
+          "@type": "WebPage",
+          "@id": "https://desktop-web-widget.martinsulak.dev/#webpage",
+          "url": "https://desktop-web-widget.martinsulak.dev/",
+          "name": "Desktop Web Widget for Windows | Live Web Widget App",
+          "description": "Pin live websites as movable Windows desktop widgets. Build desktop dashboards for market data, monitoring, notes, videos, docs, and web apps.",
+          "isPartOf": {
+            "@id": "https://desktop-web-widget.martinsulak.dev/#website"
+          },
+          "about": {
+            "@id": "https://desktop-web-widget.martinsulak.dev/#software"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://desktop-web-widget.martinsulak.dev/assets/cover.png",
+            "width": 1280,
+            "height": 720
+          },
+          "dateModified": "2026-06-16",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://desktop-web-widget.martinsulak.dev/#software",
+          "name": "Desktop Web Widget",
+          "alternateName": "Desktop Web Widget for Windows",
+          "description": "Desktop Web Widget is a Windows productivity app for pinning live websites, dashboards, market data, notes, media, embeds, and monitoring pages as movable desktop widgets.",
+          "url": "https://desktop-web-widget.martinsulak.dev/",
+          "image": "https://desktop-web-widget.martinsulak.dev/assets/cover.png",
+          "screenshot": [
+            "https://desktop-web-widget.martinsulak.dev/assets/desktop-with-widgets.png",
+            "https://desktop-web-widget.martinsulak.dev/assets/screenshot-edit-mode.png",
+            "https://desktop-web-widget.martinsulak.dev/assets/screenshot-snapping.png",
+            "https://desktop-web-widget.martinsulak.dev/assets/screenshot-locked-mode.png"
+          ],
+          "applicationCategory": "ProductivityApplication",
+          "applicationSubCategory": "Desktop dashboard software",
+          "operatingSystem": "Windows 10, Windows 11",
+          "softwareVersion": "1.1.0",
+          "featureList": [
+            "Pin live web pages as Windows desktop widgets",
+            "Move, resize, snap, layer, and lock widgets",
+            "Adjust widget opacity and locked-mode interaction",
+            "Save, load, import, and export desktop layouts"
+          ],
+          "author": {
+            "@id": "https://martinsulak.dev/#person"
+          },
+          "publisher": {
+            "@id": "https://martinsulak.dev/#person"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Direct QR payment",
+              "price": "3.00",
+              "priceCurrency": "EUR",
+              "url": "https://desktop-web-widget.martinsulak.dev/#pricing",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@id": "https://martinsulak.dev/#person"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Stripe card checkout",
+              "price": "3.30",
+              "priceCurrency": "EUR",
+              "url": "https://desktop-web-widget.martinsulak.dev/#pricing",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@id": "https://martinsulak.dev/#person"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Gumroad checkout",
+              "price": "4.29",
+              "priceCurrency": "EUR",
+              "url": "https://martinsulak.gumroad.com/l/desktop-web-widget",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@id": "https://martinsulak.dev/#person"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://desktop-web-widget.martinsulak.dev/#faq-schema",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does the app require Node.js or coding knowledge?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The download includes a normal Windows installer. You do not need Node.js, npm, Electron, or programming knowledge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can every website be displayed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The app uses isolated browser views, so normal websites can load even when they reject iframe embedding. DRM services, enterprise policies, extension-dependent pages, or sites that reject desktop app browsers may still be unavailable."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I click inside widgets?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Widgets are clickable in edit mode. You can also choose whether each widget remains interactive after locking the layout."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this a subscription?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Desktop Web Widget is a one-time purchase. QR payment, Stripe Checkout, and Gumroad are available."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://desktop-web-widget.martinsulak.dev/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Desktop Web Widget",
+              "item": "https://desktop-web-widget.martinsulak.dev/"
+            }
+          ]
         }
       ]
     }
@@ -81,7 +227,7 @@
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Desktop Web Widget home">
-      <span class="brand-mark"><img src="assets/logo.png" alt="" /></span>
+      <span class="brand-mark"><img src="assets/logo.png" alt="Desktop Web Widget logo" width="600" height="600" /></span>
       <span class="brand-copy">
         <strong>Desktop Web Widget</strong>
         <small>Windows spatial workspace</small>
@@ -140,7 +286,7 @@
             <div class="window-controls"><span></span><span></span><span></span></div>
           </div>
           <div class="desktop-canvas">
-            <img src="assets/screenshot-edit-mode.png" alt="Desktop Web Widget edit mode with a live widget and floating control panel" />
+            <img src="assets/screenshot-edit-mode.webp" alt="Desktop Web Widget edit mode with a live widget and floating control panel" width="1919" height="1031" fetchpriority="high" decoding="async" />
             <div class="canvas-shine"></div>
           </div>
           <div class="window-footer">
@@ -175,6 +321,43 @@
       <div class="signal-item"><span>01</span><strong>Pin anything</strong><small>Real websites, not screenshots</small></div>
       <div class="signal-item"><span>02</span><strong>Compose freely</strong><small>Move, resize, layer, snap</small></div>
       <div class="signal-item"><span>03</span><strong>Lock the flow</strong><small>Clean when you are done</small></div>
+    </section>
+
+    <section id="windows-desktop-widgets" class="section seo-copy-section">
+      <div class="seo-copy-shell reveal">
+        <div class="section-kicker">
+          <span>02A / Search-friendly overview</span>
+          <i></i>
+          <span>Windows desktop widgets for live web pages</span>
+        </div>
+        <div class="seo-copy-grid">
+          <div>
+            <h2>A desktop web widget app for the pages you keep checking.</h2>
+            <p>Desktop Web Widget turns ordinary websites into live Windows desktop widgets. Instead of leaving market dashboards, server status pages, documentation, notes, media players, and web apps buried in browser tabs, you can pin them directly on your desktop and keep them visible while you work.</p>
+            <p>The app is designed for people who need a personal desktop dashboard without building a custom dashboard from scratch. Add a URL, resize the widget, choose its opacity, arrange layers, save the layout, and lock everything into a calm always-visible workspace.</p>
+          </div>
+          <div class="seo-copy-cards">
+            <article>
+              <h3>Live web widgets for Windows</h3>
+              <p>Use real interactive web pages, not static screenshots. Widgets can stay clickable in edit mode or remain interactive after the layout is locked.</p>
+            </article>
+            <article>
+              <h3>Desktop dashboard layouts</h3>
+              <p>Create layouts for crypto prices, stock dashboards, monitoring tools, documentation, planning boards, video embeds, and personal web workflows.</p>
+            </article>
+            <article>
+              <h3>Fast setup, no coding</h3>
+              <p>Desktop Web Widget ships as a normal Windows app. You do not need Node.js, Electron knowledge, browser extensions, or command-line setup.</p>
+            </article>
+          </div>
+        </div>
+        <div class="seo-link-row" aria-label="Helpful product links">
+          <a href="#features">View live widget features</a>
+          <a href="#screenshots">See desktop widget screenshots</a>
+          <a href="#pricing">Compare purchase options</a>
+          <a href="support">Read support notes</a>
+        </div>
+      </div>
     </section>
 
     <section id="features" class="section feature-section">
@@ -306,27 +489,27 @@
             <small id="activeScreenshotCounter">01 / 04</small>
           </div>
           <figure class="screenshot-stage">
-            <img id="activeScreenshot" src="assets/desktop-with-widgets.png" alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" width="1919" height="1033" loading="lazy" decoding="async" />
+            <img id="activeScreenshot" src="assets/desktop-with-widgets.webp" alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" width="1919" height="1033" loading="lazy" decoding="async" />
             <figcaption id="activeScreenshotCaption">Six live web widgets arranged across one desktop</figcaption>
           </figure>
         </div>
         <div class="screenshot-controls" aria-label="Screenshot selector">
-          <button class="screenshot-tab active" data-index="01" data-image="assets/desktop-with-widgets.png" data-alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" data-caption="Six live web widgets arranged across one desktop">
+          <button class="screenshot-tab active" data-index="01" data-image="assets/desktop-with-widgets.webp" data-alt="Windows desktop displaying six live web widgets including Reddit, ChatGPT, Fuely, a personal website, Giphy, and YouTube" data-caption="Six live web widgets arranged across one desktop">
             <span><b>01</b> Full dashboard</span>
             <small>Six independent websites running together.</small>
             <i></i>
           </button>
-          <button class="screenshot-tab" data-index="02" data-image="assets/screenshot-edit-mode.png" data-alt="Edit mode with the floating panel above a widget" data-caption="Edit mode with a floating panel">
+          <button class="screenshot-tab" data-index="02" data-image="assets/screenshot-edit-mode.webp" data-alt="Edit mode with the floating panel above a widget" data-caption="Edit mode with a floating panel">
             <span><b>02</b> Edit mode</span>
             <small>Focused controls orbit the active widget.</small>
             <i></i>
           </button>
-          <button class="screenshot-tab" data-index="03" data-image="assets/screenshot-snapping.png" data-alt="Widget snapping with full monitor guide lines" data-caption="Snapping and guide lines">
+          <button class="screenshot-tab" data-index="03" data-image="assets/screenshot-snapping.webp" data-alt="Widget snapping with full monitor guide lines" data-caption="Snapping and guide lines">
             <span><b>03</b> Snapping</span>
             <small>Full-monitor guides align every surface.</small>
             <i></i>
           </button>
-          <button class="screenshot-tab" data-index="04" data-image="assets/screenshot-locked-mode.png" data-alt="Locked desktop widget layout" data-caption="Clean locked mode">
+          <button class="screenshot-tab" data-index="04" data-image="assets/screenshot-locked-mode.webp" data-alt="Locked desktop widget layout" data-caption="Clean locked mode">
             <span><b>04</b> Locked mode</span>
             <small>All content. Zero interface noise.</small>
             <i></i>
@@ -390,7 +573,7 @@
             </div>
             <div class="price"><small>&euro;</small>3<span>.00</span></div>
             <p>Pay directly with your Tatra banka QR code.</p>
-            <div class="qr-wrap"><img class="qr-image" src="assets/qrcode.jpeg" alt="Tatra banka QR payment for Desktop Web Widget" /></div>
+            <div class="qr-wrap"><img class="qr-image" src="assets/qrcode.jpeg" alt="Tatra banka QR payment for Desktop Web Widget" width="313" height="367" loading="lazy" decoding="async" /></div>
             <ul>
               <li><i></i> Lowest price without platform fees</li>
               <li><i></i> Windows installer included</li>
@@ -498,7 +681,7 @@
   <footer class="site-footer">
     <div class="footer-brand">
       <a class="brand" href="#top">
-        <span class="brand-mark"><img src="assets/logo.png" alt="" /></span>
+        <span class="brand-mark"><img src="assets/logo.png" alt="Desktop Web Widget logo" width="600" height="600" loading="lazy" decoding="async" /></span>
         <span class="brand-copy"><strong>Desktop Web Widget</strong><small>Made by Martin Sulak</small></span>
       </a>
       <p>A focused spatial layer for the live web on Windows.</p>
@@ -511,13 +694,14 @@
     </div>
     <div class="footer-column">
       <span>Company</span>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="support">Support</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
     </div>
     <div class="footer-column">
       <span>Creator</span>
-      <a href="https://martinsulak.dev/" target="_blank" rel="noreferrer">Portfolio</a>
+      <a href="https://martinsulak.dev/" target="_blank" rel="me noreferrer">Portfolio</a>
+      <a href="https://github.com/martin18f" target="_blank" rel="me noreferrer">GitHub</a>
       <a href="mailto:martinsulak18@gmail.com">Email</a>
     </div>
     <div class="footer-bottom">

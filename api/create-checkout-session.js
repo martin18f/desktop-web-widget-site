@@ -74,7 +74,7 @@ module.exports = async (request, response) => {
   params.append("line_items[0][price_data][product_data][name]", PRODUCT_NAME);
   params.append("line_items[0][price_data][product_data][description]", "Windows desktop app for pinning interactive web pages as desktop widgets.");
   params.append("line_items[0][quantity]", "1");
-  params.append("success_url", `${siteUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`);
+  params.append("success_url", `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`);
   params.append("cancel_url", `${siteUrl}/#pricing`);
   params.append("billing_address_collection", "auto");
   params.append("metadata[product]", "desktop-web-widget");

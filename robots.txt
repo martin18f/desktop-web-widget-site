@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://desktop-web-widget.martinsulak.dev/sitemap.xml
+Host: desktop-web-widget.martinsulak.dev

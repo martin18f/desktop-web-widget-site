@@ -32,6 +32,7 @@ https://martinsulak.gumroad.com/l/desktop-web-widget
 - Privacy, terms, support, and payment success pages
 - Vercel serverless endpoint for Stripe Checkout
 - Sitemap and robots metadata
+- `llms.txt` summary for AI search and answer engines
 
 ## Product Delivery
 

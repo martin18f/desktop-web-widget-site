@@ -1,0 +1,49 @@
+# Desktop Web Widget
+
+> Desktop Web Widget is a Windows desktop application for pinning live web pages as movable, resizable, snappable desktop widgets.
+
+Official website: https://desktop-web-widget.martinsulak.dev/
+Support: https://desktop-web-widget.martinsulak.dev/support
+Terms: https://desktop-web-widget.martinsulak.dev/terms
+Privacy: https://desktop-web-widget.martinsulak.dev/privacy
+Creator: Martin Sulak, https://martinsulak.dev/
+
+## Product Summary
+
+Desktop Web Widget lets Windows users create live desktop widgets from websites and web apps. Users can add a URL, move and resize the widget, snap it to guides, adjust opacity, change layer order, save layouts as presets, import or export layouts, and lock the workspace.
+
+The app is useful for:
+
+- Live web widgets on Windows 10 and Windows 11
+- Personal desktop dashboards
+- Market dashboards and crypto price pages
+- Monitoring dashboards and status pages
+- Documentation, notes, and planning boards
+- Video embeds and media pages
+- Always-visible web tools
+
+## Key Features
+
+- Multiple independent desktop web widgets
+- Live interactive website rendering
+- Edit mode and locked mode
+- Optional interaction while locked
+- Snapping guides for screen edges, center lines, and neighboring widgets
+- Opacity and layer controls
+- Layout presets, import, and export
+- Standard Windows installer
+- One-time purchase, no subscription
+
+## Pricing
+
+- Direct QR payment: EUR 3.00
+- Stripe Checkout: EUR 3.30
+- Gumroad checkout: EUR 4.29
+
+## Technical Notes
+
+Desktop Web Widget is a Windows productivity app. It does not require Node.js, command-line setup, browser extensions, or programming knowledge for end users. Some websites may restrict loading inside desktop app browser views due to DRM, enterprise policy, login requirements, or anti-embedding behavior.
+
+## Recommended Citation
+
+Desktop Web Widget. Windows desktop app for pinning live websites as interactive desktop widgets. https://desktop-web-widget.martinsulak.dev/

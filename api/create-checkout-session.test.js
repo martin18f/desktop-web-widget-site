@@ -127,7 +127,7 @@ test("checkout creates the expected Stripe session", async () => {
     assert.equal(requestBody.get("line_items[0][price_data][unit_amount]"), "330");
     assert.equal(
       requestBody.get("success_url"),
-      "https://desktop-web-widget.martinsulak.dev/success.html?session_id={CHECKOUT_SESSION_ID}"
+      "https://desktop-web-widget.martinsulak.dev/success?session_id={CHECKOUT_SESSION_ID}"
     );
   } finally {
     global.fetch = originalFetch;

@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://desktop-web-widget.martinsulak.dev/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://desktop-web-widget.martinsulak.dev/assets/cover.png</image:loc>
+      <image:caption>Desktop Web Widget product preview on a Windows desktop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://desktop-web-widget.martinsulak.dev/assets/desktop-with-widgets.png</image:loc>
+      <image:caption>Windows desktop with multiple live web widgets</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://desktop-web-widget.martinsulak.dev/privacy.html</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://desktop-web-widget.martinsulak.dev/support</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://desktop-web-widget.martinsulak.dev/terms.html</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://desktop-web-widget.martinsulak.dev/terms</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://desktop-web-widget.martinsulak.dev/support.html</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://desktop-web-widget.martinsulak.dev/privacy</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
